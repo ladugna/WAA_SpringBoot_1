@@ -54,10 +54,7 @@ public class BookServiceImpl implements BookService {
       bookRepository.deleteById(id);
     }
 
-    @Override
-    public List<Author> findAuthorByBook(long isbn) {
-        return bookRepository.findAuthorByBook(isbn);
-    }
+
 
     @Override
     public List<Book> findBookByAuths(int numOfAuths) {

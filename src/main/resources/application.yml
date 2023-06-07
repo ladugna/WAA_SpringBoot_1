@@ -1,9 +1,9 @@
 spring:
   application:
-    name: mid-exam-practice
+    name: waa_springboot_1
   datasource:
     password: 1
-    url: jdbc:postgresql://localhost:5432/mid-exam-practice
+    url: jdbc:postgresql://localhost:5432/waa_springboot_1
     username: postgres
   jpa:
     hibernate:

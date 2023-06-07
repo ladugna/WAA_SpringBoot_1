@@ -1,5 +1,6 @@
 package cs.cs545.midexampractice.midexampractice.model;
 
+import com.fasterxml.jackson.annotation.JsonManagedReference;
 import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
 import lombok.Builder;
@@ -18,6 +19,7 @@ public class Author {
     @GeneratedValue(strategy = GenerationType.AUTO)
     private long author_id;
     private String name;
+    @JsonManagedReference
     @ManyToMany(cascade = CascadeType.PERSIST)
     @JoinTable(name = "Book_Author",
             joinColumns = @JoinColumn(name = "author_id"),

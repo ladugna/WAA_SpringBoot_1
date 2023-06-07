@@ -1,7 +1,7 @@
 services:
 
   postgres:
-    container_name: postgres-mid-exam-practice
+    container_name: postgres-mid-exam-practice_1
     image: postgres
     environment:
       POSTGRES_USER: postgres
@@ -14,7 +14,7 @@ services:
     restart: unless-stopped
 
   pgadmin:
-    container_name: pgadmin-mid-exam-practice
+    container_name: pgadmin-mid-exam-practice_1
     image: dpage/pgadmin4
     environment:
       PGADMIN_DEFAULT_EMAIL: ${PGADMIN_DEFAULT_EMAIL:-pgadmin4@pgadmin.org}

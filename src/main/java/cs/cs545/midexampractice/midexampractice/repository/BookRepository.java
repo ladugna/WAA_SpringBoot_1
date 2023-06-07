@@ -13,7 +13,7 @@ import java.util.List;
 public interface BookRepository extends JpaRepository<Book, Long> {
 
     @Query("select a from Author a join a.books b where b.isbn=:isbn")
-    List<Author> findAuthorByBook(@Param("isbn") long isbn);
+    List<Author> findAuthorByBookISBN(@Param("isbn") long isbn);
 
     @Query("select b from Book b where size(b.authors) =:numOfAuths")
    // @Query("select b from Book b join b.authors a where p(a.size)=:numOfAuths")

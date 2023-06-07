@@ -15,10 +15,8 @@ public interface BookService {
     void save(Book book);
     void deleteBookById(long id);
 
-    List<Author> findAuthorByBook(@Param("isbn") long isbn);
-
     List<Book> findBookByAuths(@Param("numOfAuths") int numOfAuths);
 
-    List<Book> findByCriteria(@Param("country")String country, @Param("id") long id );
+    List<Book> findByCriteria(@Param("country")String country, @Param("catId") long catId );
   public List<Book> searchReviewCriteria( String title, Double price);
 }

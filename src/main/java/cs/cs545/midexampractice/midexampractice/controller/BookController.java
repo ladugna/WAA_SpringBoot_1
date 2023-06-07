@@ -15,6 +15,7 @@ import java.util.List;
 public class BookController {
   @Autowired
   private BookService bookService;
+
 @GetMapping
 public ResponseEntity<?> getAllBooks(){
     return new ResponseEntity<>(bookService.findAll(), HttpStatus.OK);
@@ -37,14 +38,16 @@ public ResponseEntity<?> getAllBooks(){
     }
 
 
+
+
     @GetMapping("/filter")
     public ResponseEntity<?> findBookByAuths(@RequestParam("numOfAuths") int numOfAuths){
     return new ResponseEntity<>(bookService.findBookByAuths(numOfAuths), HttpStatus.OK);
     }
 
     @GetMapping("/filterByCriteria")
-    public ResponseEntity<?> findByCriteria(@RequestParam("country")String country, @RequestParam("id") long id ){
-    return new ResponseEntity<>(bookService.findByCriteria(country, id), HttpStatus.OK);
+    public ResponseEntity<?> findByCriteria(@RequestParam("country")String country, @RequestParam("catId") long catId ){
+    return new ResponseEntity<>(bookService.findByCriteria(country, catId), HttpStatus.OK);
     }
     @GetMapping("/filterTitle")
     public ResponseEntity<?> searchReviews(
